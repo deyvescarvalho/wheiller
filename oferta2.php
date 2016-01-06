@@ -1,6 +1,6 @@
 <?php require_once 'header.php';?>
 <h1 class="text-center"> OFERTA 2</h1>
-<section class="container-fluid">
+<section class="container-fluid oferta2">
     <div class="row">
         <div class="containerForm">
             <form action="" name="oferta1">

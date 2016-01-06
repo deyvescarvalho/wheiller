@@ -1,6 +1,6 @@
 <?php require_once 'header.php';?>
 <h1 class="text-center"> NOME DA CAMPANHA</h1>
-<section class="container-fluid">
+<section class="container-fluid passo3">
     <div class="row">
         <aside>
             <div class="col-md-3 col-md-offset-2 ladoesq">
