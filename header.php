@@ -4,6 +4,13 @@
     <meta charset="UTF-8">
     <title></title>
     <link rel="stylesheet" href="css/css/bootstrap.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>
+    $(document).ready(function(){
+          $(".pass2,.pass3,.pass4,.pass5,.pass6,.pass7").hide();
+          $("p").show();
+});
+    </script>
 </head>
 <body>
 <nav class="navbar navbar-default">
