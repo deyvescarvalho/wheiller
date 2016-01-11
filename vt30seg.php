@@ -2,42 +2,46 @@
 <h1 class="pass1 text-center">Opções de Vídeo</h1>
 <section class="pass1 container-fluid">
   <div class="row">
-    <form action="postar.php" method="post">
-    <article class="escolhaVideo col-lg-3">
-      <div class="fotoVideo">
-        <video controls>
-          <source src="videos/Javel.webm" type="video/webm">
-            Your browser does not support the video tag.
-          </video>
-          <input type="radio"  id="vt1" class="tipodovt" name="opcaoVt" value="vt01"> Escolher
+    <form id="cadVt" action="postar.php" method="post">
+      <article class="escolhaVideo col-lg-3">
+        <div class="fotoVideo">
+          <video controls>
+            <source src="videos/Javel.webm" type="video/webm">
+              Your browser does not support the video tag.
+            </video>
+            <input type="text" name="nomeCampanha">
+            <input type="radio"  id="vt1" class="tipodovt" name="opcaoVt" value="vt01"> Escolher
+          </div>
+        </article>
+        <article>
+          <div class="fotoVideo">
+            <video controls>
+              <source src="videos/Javel.webm" type="video/webm">
+                Your browser does not support the video tag.
+              </video>
+              <input type="radio"  id="vt2" class="tipodovt" name="opcaoVt" value="vt02"> Escolher
+            </div>
+          </article>
+          <article>
+            <div class="fotoVideo">
+              <video controls>
+                <source src="videos/Javel.webm" type="video/webm">
+                  Your browser does not support the video tag.
+                </video>
+                <input type="radio"  id="vt3" class="tipodovt" name="opcaoVt" value="vt03"> Escolher
+              </div>
+            </article>
+          </form>
         </div>
-      </article>
-      <div class="fotoVideo">
-        <video controls>
-          <source src="videos/Javel.webm" type="video/webm">
-            Your browser does not support the video tag.
-          </video>
-          <input type="radio"  id="vt2" class="tipodovt" name="opcaoVt" value="vt02"> Escolher
+        <br>
+        <div class="row">
+          <button type="button" id="btn1" name="button" style="float: right;" class="btn btn-default"> Avançar</button>
         </div>
-      </article>
-      <div class="fotoVideo">
-        <video controls>
-          <source src="videos/Javel.webm" type="video/webm">
-            Your browser does not support the video tag.
-          </video>
-          <input type="radio"  id="vt3" class="tipodovt" name="opcaoVt" value="vt03"> Escolher
-        </div>
-      </article>
-    </div>
-    <br>
-    <div class="row">
-      <button type="button" id="btn1" name="button" style="float: right;" class="btn btn-default"> Avançar</button>
-    </div>
-  </section>
+      </section>
 
-  <h1 class="pass2 text-center"> ABERTURA DO VÍDEO</h1>
-  <section class="pass2 container-fluid passo2">
-    <div class="row">
+      <!-- <h1 class="pass2 text-center"> ABERTURA DO VÍDEO</h1>
+      <section class="pass2 container-fluid passo2">
+        <div class="row">
           <aside>
             <div class="col-md-3 col-md-offset-2 ladoesq">
               <br>
@@ -77,7 +81,7 @@
           </aside>
           <aside class="ladodir col-md-6">
             <h3>Digite o nome da campanha:</h3>
-            <input type="text" class="nomeCampanha form-control" id="opc" placeholder="Inserir texto de abertura">
+            <input type="text" name="nomeCampanha" class="nomeCampanha form-control" id="opc" placeholder="Inserir texto de abertura">
             <br>
             <div class="containerAjuda">
               <p>Se você não sabe que texto utilizar, temos alguns exemplos:</p>
@@ -98,9 +102,9 @@
       <section class="pass4 container-fluid passo4">
         <div class="row">
           <div class="containerForm">
-            <!-- <form action="" name="oferta1"> -->
+            <form class="cadVt" name="oferta1">
               <div class="form-group col-md-6">
-                <input type="text" id="nmProduto" placeholder="Nome do Produto" class="txtoferta1 oferta form-control">
+                <input type="text" name="nomeDoProduto" id="nmProduto" placeholder="Nome do Produto" class="txtoferta1 oferta form-control">
               </div>
               <div class="form-group col-md-6">
                 <input type="text" id="caracProduto" placeholder="Características do produto" class="oferta form-control">
@@ -126,7 +130,7 @@
               <div class="form-group col-md-12">
                 <textarea name="txtJuridico" id="textoJuridico" placeholder="Texto Jurídico" class="oferta form-control" style="resize: none;" rows="6"></textarea>
               </div>
-            <!-- </form> -->
+            </form>
           </div>
         </div>
         <br>
@@ -143,7 +147,7 @@
       <section class="pass5 container-fluid oferta2">
         <div class="row">
           <div class="containerForm">
-            <!-- <form action="" name="oferta1"> -->
+            <form class="cadVt">
               <div class="form-group col-md-6">
                 <input type="text" id="nmProduto" placeholder="Nome do Produto" class="txtoferta2 oferta form-control">
               </div>
@@ -171,7 +175,7 @@
               <div class="form-group col-md-12">
                 <textarea name="txtJuridico" id="textoJuridico" placeholder="Texto Jurídico" class="form-control oferta" style="resize: none;" rows="6"></textarea>
               </div>
-            <!-- </form> -->
+            </form>
           </div>
         </div>
         <br>
@@ -188,7 +192,7 @@
       <section class="pass6 container-fluid">
         <div class="row">
           <div class="containerForm">
-            <!-- <form action="" name="oferta3"> -->
+            <form class="cadVt">
               <div class="form-group col-md-6">
                 <input type="text" placeholder="Nome do Produto" class="form-control oferta txtoferta3">
               </div>
@@ -216,7 +220,7 @@
               <div class="form-group col-md-12">
                 <textarea name="txtJuridico" id="textoJuridico" placeholder="Texto Jurídico" class="form-control oferta" style="resize: none;" rows="6"></textarea>
               </div>
-            <!-- </form> -->
+            </form>
           </div>
         </div>
         <br>
@@ -232,7 +236,7 @@
       <section class="pass7 container-fluid">
         <div class="row">
           <div class="containerForm">
-            <!-- <form action="" name="oferta1"> -->
+            <form class="cadVt">
               <div class="form-group col-md-6">
                 <input type="text" placeholder="Nome da empresa" class="dadoEmpresa txtEmpresaDado form-control">
               </div>
@@ -248,7 +252,7 @@
               <div class="inputFile form-group col-md-6">
                 <input type="file" class="form-control" name="arquivo" id="arquivo" accept="image/*">
               </div>
-            <!-- </form> -->
+            </form>
           </div>
         </div>
         <br>
@@ -262,65 +266,89 @@
           </div>
           <div class="row">
             <button type="button" id="btn7" name="button" style="float: right;" class="btn btn-default"> Avançar</button>
+            <input type="button" id="salvar" value="salvar">
           </div>
         </section>
-</form>
+      </form>
 
-        <script>
-        $(document).ready(function(){
-          $("#btn1").click(function(){
-            $('.tipodovt').each(function(){
-              if ($(this).is(':checked')) {
-                nome = $(this).val();
-              };
-            })
-            console.log(nome);
-            $(".pass2").show();
-            $(".pass1").hide();
-            $('.txtAbertura').focus();
-          });
-          $("#btn2").click(function(){
-
-            textoAbertura = $(".txtAbertura").val();
-            console.log(textoAbertura);
-            $(".pass3").show();
-            $(".pass2").hide();
-            $('.nomeCampanha').focus();
-          });
-          $("#btn3").click(function(){
-            var nomeCampanha = $(".nomeCampanha").val();
-            console.log(nomeCampanha);
-            $(".pass4").show();
-            $(".pass3").hide();
-            $('.txtoferta1').focus();
-          });
-          $("#btn4").click(function(){
-            $(".pass5").show();
-            $(".pass4").hide();
-            $('.txtoferta2').focus();
-          });
-          $("#btn5").click(function(){
-            $(".pass6").show();
-            $(".pass5").hide();
-            $('.txtoferta3').focus();
-          });
-          $("#btn6").click(function(){
-            var oferta = [];
-            $(".oferta").each(function(){
-              oferta.push($(this).val());
-            });
-            console.log(oferta);
-            $(".pass7").show();
-            $(".pass6").hide();
-            $('.txtEmpresaDado').focus();
-          });
-          $("#btn7").click(function(){
-            var dadoEmpresa = [];
-            $(".dadoEmpresa").each(function(){
-              dadoEmpresa.push($(this).val());
-            });
-            console.log(dadoEmpresa);
-          });
+      <script>
+      $(document).ready(function(){
+        $("#btn1").click(function(){
+          $('.tipodovt').each(function(){
+            if ($(this).is(':checked')) {
+              nome = $(this).val();
+            };
+          })
+          console.log(nome);
+          $(".pass2").show();
+          $(".pass1").hide();
+          $('.txtAbertura').focus();
         });
-        </script>
-        <?php require_once 'footer.php';?>
+        $("#btn2").click(function(){
+
+          textoAbertura = $(".txtAbertura").val();
+          console.log(textoAbertura);
+          $(".pass3").show();
+          $(".pass2").hide();
+          $('.nomeCampanha').focus();
+        });
+        $("#btn3").click(function(){
+          var nomeCampanha = $(".nomeCampanha").val();
+          console.log(nomeCampanha);
+          $(".pass4").show();
+          $(".pass3").hide();
+          $('.txtoferta1').focus();
+        });
+        $("#btn4").click(function(){
+          $(".pass5").show();
+          $(".pass4").hide();
+          $('.txtoferta2').focus();
+        });
+        $("#btn5").click(function(){
+          $(".pass6").show();
+          $(".pass5").hide();
+          $('.txtoferta3').focus();
+        });
+        $("#btn6").click(function(){
+          var oferta = [];
+          $(".oferta").each(function(){
+            oferta.push($(this).val());
+          });
+          console.log(oferta);
+          $(".pass7").show();
+          $(".pass6").hide();
+          $('.txtEmpresaDado').focus();
+        });
+        $("#btn7").click(function(){
+          var dadoEmpresa = [];
+          $(".dadoEmpresa").each(function(){
+            dadoEmpresa.push($(this).val());
+          });
+          console.log(dadoEmpresa);
+        });
+      });
+      </script> -->
+      <input type="button" id="salvar" value="salvar">
+
+      <script type="text/javascript" language="javascript">
+      $(document).ready(function() {
+        /// Quando usuário clicar em salvar será feito todos os passo abaixo
+        $('#salvar').click(function() {
+          var dados = $('#cadVt').serialize();
+          $.ajax({
+            type: 'POST',
+            dataType: 'json',
+            url: 'salvar.php',
+            async: true,
+            data: dados,
+            success: function(response) {
+              location.reload();
+            }
+          });
+          return false;
+        });
+      });
+
+      </script>
+
+      <?php require_once 'footer.php';?>
