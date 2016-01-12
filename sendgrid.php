@@ -4,9 +4,19 @@ $url = 'https://api.sendgrid.com/';
 $user = 'deyves';
 $pass = 'q13791919';
 
+$json_string = array(
+
+  'to' => array(
+    'deyvescarvalho@gmail.com', 'example2@sendgrid.com'
+  ),
+  'category' => 'test_category'
+);
+
+
 $params = array(
     'api_user'  => $user,
     'api_key'   => $pass,
+    'x-smtpapi' => json_encode($json_string),
     'to'        => 'deyvescarvalho@gmail.com',
     'subject'   => 'testing from curl',
     'html'      => 'testing body',
