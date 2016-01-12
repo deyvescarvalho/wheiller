@@ -1,38 +1,32 @@
 <?php
-/**
-   *String que armazena o email de onde partirá os emails (remetente).
-   *@var string
-   */
-   const GUSER = 'deyvescarvalho@gmail.com';
+//Site: http://sourceforge.net/projects/phpmailer/files/phpmailer%20for%20php5_6/
+include "class.phpmailer.php"; //caminho do arquivo da classe do phpmailer
 
-   /**
-   *String que armazena a senha do email de onde partirá os emails (remetente).
-   *@var string
-   */
-   const GPWD = 'abstratooi%#d';
+$mail = new PHPMailer();
+$mail->IsSMTP(); // send via SMTP
+$mail->Host = "deyvescarvalho@gmail.com"; //Endereço do seu Servidor de Email
+$mail->SMTPAuth = true; // true se o email é autenticado
+$mail->Username = "deyvescarvalho@gmail.com"; // Seu endereço de email que envia os email
+$mail->Password = "abstratooi%#d"; // senha do usuário que envia o email
+$mail->From = "deyvescarvalho@gmail.com"; a pessoa que ta enviando o email
 
-   /**
-   *String que armazena o email para qual as mensagens serão enviadas (destinatário).
-   *@var string
-   */
-   const GSEND = 'deyvescarvalho@gmail.com';
+$mail->FromName = "remetente"; Nome de quem ta enviando...
+$mail->AddAddress("deyvescarvalho@gmail.com","Nome do Destinatario ");
+$mail->AddAddress("email@destinatario"); // (opcional) só o envio pelo email
+$mail->AddReplyTo("email@destinatario.copia","Nome do Destinatario para quem ira a resposta");
 
+$mail->WordWrap = 50; // Quebra de linha
+$mail->IsHTML(true); // Se for true é enviando email no formato HTML
+$mail->Subject = "Assunto da mensagem "; //Assunto do seu Email
+$mail->Body = "Conteúdo da mensagem HTML"; //Conteudo HTML
+$mail->AltBody = "Para mensagens somente texto"; //Somente Texto
 
-  static function contactUsEmail(){
-
-       $emailRemetente = $_POST['email'];
-       $name = $_POST['name'];
-       $subject = $_POST['subject'];
-       $mensagem = $_POST["message"];
-       $corpoMensagem = '<b>CONCTACT US EMAIL</b>'.'<br /><b>Email Remetente: </b>'.$emailRemetente.
-       '<br /><b>Nome:</b>'.$name.'<br /><b>Assunto:</b>'.$subject.'<br /><b>Mensagem:</b>'.$mensagem;
-
-       $sendResult = SendEmail::smtpMailer(SendEmail::GSEND, SendEmail::GUSER, $name, $subject, $corpoMensagem);
-
-       if($sendResult === true){
-            echo 'Mensagem Enviada com Sucesso';
-       }else{
-           echo $sendResult;
-       }
-   }
+//Enviando o Email e tento a confirmação se foi ou não ...
+if(!$mail->Send())
+{
+    echo "Aconteceu algum problema no envio da Mensagem: ";
+    echo "Mailer Error: " . $mail->ErrorInfo;
+} else {
+    echo "E-mail enviado com sucesso...";
+}
  ?>
