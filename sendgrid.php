@@ -14,7 +14,7 @@ $params = array(
     'subject'   => 'test of file sends',
     'html'      => '<p> the HTML </p>',
     'text'      => 'the plain text',
-    'from'      => 'example@sendgrid.com',
+    'from'      => 'deyvescarvalho@gmail.com',
     'files['.$fileName.']' => '@'.$filePath.'/'.$fileName
   );
 
