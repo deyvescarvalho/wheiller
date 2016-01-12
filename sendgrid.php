@@ -4,7 +4,7 @@ include "class.phpmailer.php"; //caminho do arquivo da classe do phpmailer
 
 $mail = new PHPMailer();
 $mail->IsSMTP(); // send via SMTP
-$mail->Host = "deyvescarvalho@gmail.com"; //Endereço do seu Servidor de Email
+$mail->Host = "smtp.gmail.com"; //Endereço do seu Servidor de Email
 $mail->SMTPAuth = true; // true se o email é autenticado
 $mail->Username = "deyvescarvalho@gmail.com"; // Seu endereço de email que envia os email
 $mail->Password = "abstratooi%#d"; // senha do usuário que envia o email
