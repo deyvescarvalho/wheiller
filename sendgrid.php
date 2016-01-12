@@ -1,49 +1,15 @@
 <?php
+require 'vendor/autoload.php';
+use Mailgun\Mailgun;
 
-$url = 'https://api.sendgrid.com/';
-$user = 'deyves';
-$pass = 'q13791919';
+# Instantiate the client.
+$mgClient = new Mailgun('key-9cf2cda2430949f1f3c06b280a5efaa1');
+$domain = "sandbox52b074d349a24ac5bddb432c4bd024ea.mailgun.org";
 
-$json_string = array(
-
-  'to' => array(
-    'deyvescarvalho@gmail.com', 'example2@sendgrid.com'
-  ),
-  'category' => 'test_category'
-);
-
-
-$params = array(
-    'api_user'  => $user,
-    'api_key'   => $pass,
-    'x-smtpapi' => json_encode($json_string),
-    'to'        => 'deyvescarvalho@gmail.com',
-    'subject'   => 'testing from curl',
-    'html'      => 'testing body',
-    'text'      => 'testing body',
-    'from'      => 'example@sendgrid.com',
-  );
-
-
-$request =  $url.'api/mail.send.json';
-
-// Generate curl request
-$session = curl_init($request);
-// Tell curl to use HTTP POST
-curl_setopt ($session, CURLOPT_POST, true);
-// Tell curl that this is the body of the POST
-curl_setopt ($session, CURLOPT_POSTFIELDS, $params);
-// Tell curl not to return headers, but do return the response
-curl_setopt($session, CURLOPT_HEADER, false);
-// Tell PHP not to use SSLv3 (instead opting for TLS)
-curl_setopt($session, CURLOPT_SSLVERSION, CURL_SSLVERSION_TLSv1_2);
-curl_setopt($session, CURLOPT_RETURNTRANSFER, true);
-
-// obtain response
-$response = curl_exec($session);
-curl_close($session);
-
-// print everything out
-print_r($response);
-
-?>
+# Make the call to the client.
+$result = $mgClient->sendMessage("$domain",
+                  array('from'    => 'Mailgun Sandbox <postmaster@sandbox52b074d349a24ac5bddb432c4bd024ea.mailgun.org>',
+                        'to'      => 'Deyves carvalho <deyvescarvalho@gmail.com>',
+                        'subject' => 'Hello Deyves carvalho',
+                        'text'    => 'Congratulations Deyves carvalho, you just sent an email with Mailgun!  You are truly awesome!  You can see a record of this email in your logs: https://mailgun.com/cp/log .  You can send up to 300 emails/day from this sandbox server.  Next, you should add your own domain so you can send 10,000 emails/month for free.'));
+ ?>
