@@ -1,5 +1,5 @@
 <?php
-
+require "PHPMailer-FE_v4.11/phpmailer-fe.php";
 //
 // $conect = mysql_connect("localhost", "root", "deyves");
 // // Caso a conexão seja reprovada, exibe na tela uma mensagem de erro
@@ -34,7 +34,7 @@ if(isset($_POST["phpmailer"]))
 	// $mensagem = $_POST["mensagem"];
 	// $anexo = $_FILES["anexo"];
 
-	require "class.phpmailer.php";
+
 
 	$mail = new PHPMailer;
 	$mail->Host = "localhost";
