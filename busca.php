@@ -43,48 +43,52 @@
 // $headers = "Cc: ".$comcopia.$quebra_linha;
 // $headers = "Bcc: ".$comcopiaoculta.$quebra_linha;
 // $headers = "Reply-To: ".$emailsender.$quebra_linha;
+$Nome		= $_POST["Nome"];	// Pega o valor do campo Nome
+$Fone		= $_POST["Fone"];	// Pega o valor do campo Telefone
+$Email		= $_POST["Email"];	// Pega o valor do campo Email
+$Mensagem	= $_POST["Mensagem"];	// Pega os valores do campo Mensagem
 
-$destinatario = "deyvescarvalho@gmail.com";
-$assunto = "Esta mensagem é um teste";
-$corpo = '
-<html>
-<head>
-  <title>Teste de correio</title>
-</head>
-<body>
-<h1>Olá amigos!</h1>
-<p>
-<b>Bem-vindos ao meu correio electrónico de teste</b>. Estou contente de ter tantos leitores.
-</p>
-</body>
-</html>
-';
+// Variável que junta os valores acima e monta o corpo do email
 
-//para o envio em formato HTML
-$headers = "MIME-Version: 1.0
-";
-$headers .= "Content-type: text/html;
-charset=iso-8859-1
-";
+$Vai 		= "Nome: 'deyves'\n\nE-mail: 'deyvescarvalho@gmail.com'\n\nTelefone: '456'\n\nMensagem: 'asdda'\n";
 
-//endereço do remitente
-$headers .= "From: Xuxé <deyvescarvalho@hotmail.com>
-";
+require_once("phpmailer/class.phpmailer.php");
 
-//endereço de resposta, se queremos que seja diferente a do remitente
-$headers .= "Reply-To: deyvescarvalho@hotmail.com
-";
+define('GUSER', 'deyvescarvalho@gmail.com');	// <-- Insira aqui o seu GMail
+define('GPWD', 'abstratooi%#dka');		// <-- Insira aqui a senha do seu GMail
 
-//endereços que receberão uma copia $headers .= "Cc: manel@desarrolloweb.com
-
-//endereços que receberão uma copia oculta
-$headers .= "Bcc: deyvescarvalho@gmail.com
-";
-if (mail($destinatario,$assunto,$corpo,$headers)) {
-  print "asd";
-}else {
-  print "aaaasd";
+function smtpmailer('deyvescarvalho@gmail.com', 'deyvescarvalho@gmail.com', 'deyvescarvalho@gmail.com', 'asda', 'aaaaaa') {
+	global $error;
+	$mail = new PHPMailer();
+	$mail->IsSMTP();		// Ativar SMTP
+	$mail->SMTPDebug = 0;		// Debugar: 1 = erros e mensagens, 2 = mensagens apenas
+	$mail->SMTPAuth = true;		// Autenticação ativada
+	$mail->SMTPSecure = 'ssl';	// SSL REQUERIDO pelo GMail
+	$mail->Host = 'smtp.gmail.com';	// SMTP utilizado
+	$mail->Port = 587;  		// A porta 587 deverá estar aberta em seu servidor
+	$mail->Username = GUSER;
+	$mail->Password = GPWD;
+	$mail->SetFrom('deyvescarvalho@gmail.com', 'deyvescarvalho@gmail.com');
+	$mail->Subject = 'asd';
+	$mail->Body = 'aaaaa';
+	$mail->AddAddress('deyvescarvalho@gmail.com');
+	if(!$mail->Send()) {
+		$error = 'Mail error: '.$mail->ErrorInfo;
+		return false;
+	} else {
+		$error = 'Mensagem enviada!';
+		return true;
+	}
 }
 
+// Insira abaixo o email que irá receber a mensagem, o email que irá enviar (o mesmo da variável GUSER),
+// o nome do email que envia a mensagem,
+// o Assunto da mensagem e por último a variável com o corpo do email.
 
+ if (smtpmailer('deyvescarvalho@gmail.com', 'deyvescarvalho@gmail.com', 'Nome do Enviador', 'Assunto do Email', $Vai)) {
+
+	Header("location:http://54.94.230.223"); // Redireciona para uma página de obrigado.
+
+}
+if (!empty($error)) echo $error;
 ?>
