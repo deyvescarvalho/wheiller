@@ -44,46 +44,14 @@ $mensagemHTML = '<p>teste</p>';
 // $headers = "Bcc: ".$comcopiaoculta.$quebra_linha;
 // $headers = "Reply-To: ".$emailsender.$quebra_linha;
 
-$to  = 'deyvescarvalho@gmail.com' . ', '; // note the comma
-$to .= 'deyvescarvalho@gmail.com';
+$headers   = array();
+$headers[] = "MIME-Version: 1.0";
+$headers[] = "Content-type: text/plain; charset=iso-8859-1";
+$headers[] = "From: Sender Name <deyvescarvalho@gmail.com>";
+$headers[] = "Bcc: JJ Chong <deyvescarvalho@gmail.com>";
+$headers[] = "Reply-To: Recipient Name <deyvescarvalho@gmail.com>";
+$headers[] = "Subject: {$assunto}";
+$headers[] = "X-Mailer: PHP/".phpversion();
 
-// subject
-$subject = 'Birthday Reminders for August';
-
-// message
-$message = '
-<html>
-<head>
- <title>Birthday Reminders for August</title>
-</head>
-<body>
-<p>Here are the birthdays upcoming in August!</p>
-<table>
- <tr>
-  <th>Person</th><th>Day</th><th>Month</th><th>Year</th>
- </tr>
- <tr>
-  <td>Joe</td><td>3rd</td><td>August</td><td>1970</td>
- </tr>
- <tr>
-  <td>Sally</td><td>17th</td><td>August</td><td>1973</td>
- </tr>
-</table>
-</body>
-</html>
-';
-
-// To send HTML mail, the Content-type header must be set
-$headers  = 'MIME-Version: 1.0' . "\n";
-$headers .= 'Content-type: text/html; charset=iso-8859-1' . "\n";
-
-// Additional headers
-$headers .= 'To: Mary <deyvescarvalho@gmail.com>, Kelly <deyvescarvalho@gmail.com>' . "\n";
-$headers .= 'From: Birthday Reminder <deyvescarvalho@gmail.com>' . "\n";
-$headers .= 'Cc: deyvescarvalho@gmail.com' . "\n";
-$headers .= 'Bcc: deyvescarvalho@gmail.com' . "\n";
-
-// Mail it
-mail($to, $subject, $message, $headers);
-
+mail($emailsender, $assunto, $emailsender, implode("\r\n", $headers));
 ?>
