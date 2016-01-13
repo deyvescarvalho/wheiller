@@ -44,6 +44,10 @@ $headers = "Cc: ".$comcopia.$quebra_linha;
 $headers = "Bcc: ".$comcopiaoculta.$quebra_linha;
 $headers = "Reply-To: ".$emailsender.$quebra_linha;
 
-mail($emaildestinatario, $assunto, $mensagemHTML, $headers, "-r". $emailsender);
+if (mail($emaildestinatario, $assunto, $mensagemHTML, $headers, "-r". $emailsender)) {
 print "Mensagem enviada com sucesso!";
+}else {
+  print "Não enviou";
+}
+
 ?>
