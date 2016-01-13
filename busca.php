@@ -80,7 +80,7 @@ $headers .= "Reply-To: deyvescarvalho@hotmail.com
 //endereços que receberão uma copia oculta
 $headers .= "Bcc: deyvescarvalho@gmail.com
 ";
-if (mail($destinatario,$assunto,$corpo,$headers);) {
+if (mail($destinatario,$assunto,$corpo,$headers)) {
   print "asd";
 }else {
   print "aaaasd";
