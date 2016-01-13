@@ -43,16 +43,15 @@ $mensagemHTML = '<p>teste</p>';
 // $headers = "Cc: ".$comcopia.$quebra_linha;
 // $headers = "Bcc: ".$comcopiaoculta.$quebra_linha;
 // $headers = "Reply-To: ".$emailsender.$quebra_linha;
-function mail_utf8($emailsender, $emailsender, $emailsender,
-                                             $subject = '(No subject)', $message = 'asd')
-   {
-      $emailsender = "=?UTF-8?B?".base64_encode($emailsender)."?=";
-      $subject = "=?UTF-8?B?".base64_encode($subject)."?=";
 
-      $headers = "From: $from_user <$emailsender>\r\n".
-               "MIME-Version: 1.0" . "\r\n" .
-               "Content-type: text/html; charset=UTF-8" . "\r\n";
 
-     return mail($emailsender, $subject, $message, $headers);
-   }
+// the message
+$msg = "First line of text\nSecond line of text";
+
+// use wordwrap() if lines are longer than 70 characters
+$msg = wordwrap($msg,70);
+
+// send email
+mail("deyvescarvalho@gmail.com","My subject",$msg);
+
 ?>
