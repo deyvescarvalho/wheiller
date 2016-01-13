@@ -24,17 +24,17 @@
 //   echo" <td>$email</td>";
 //   echo" <td>$senha</td>";
 // }
-
-$quebra_linha = "\n";
-$emailsender = "deyvescarvalho@gmail.com";
-$nomeremetente = "Email";
-$emaildestinatario = "deyvescarvalho@gmail.com";
-$comcopia = "deyvescarvalho@gmail.com";
-$comcopiaoculta = "deyvescarvalho@gmail.com";
-$assunto = "teste";
-$mensagem = "conteudo";
-
-$mensagemHTML = '<p>teste</p>';
+//
+// $quebra_linha = "\n";
+// $emailsender = "deyvescarvalho@gmail.com";
+// $nomeremetente = "Email";
+// $emaildestinatario = "deyvescarvalho@gmail.com";
+// $comcopia = "deyvescarvalho@gmail.com";
+// $comcopiaoculta = "deyvescarvalho@gmail.com";
+// $assunto = "teste";
+// $mensagem = "conteudo";
+//
+// $mensagemHTML = '<p>teste</p>';
 
 // $headers = "MIME-Version: 1.1".$quebra_linha;
 // $headers = "Content-type: text/plain; charset=iso-8859-1".$quebra_linha;
@@ -44,14 +44,47 @@ $mensagemHTML = '<p>teste</p>';
 // $headers = "Bcc: ".$comcopiaoculta.$quebra_linha;
 // $headers = "Reply-To: ".$emailsender.$quebra_linha;
 
+$destinatario = "deyvescarvalho@gmail.com";
+$assunto = "Esta mensagem é um teste";
+$corpo = '
+<html>
+<head>
+  <title>Teste de correio</title>
+</head>
+<body>
+<h1>Olá amigos!</h1>
+<p>
+<b>Bem-vindos ao meu correio electrónico de teste</b>. Estou contente de ter tantos leitores.
+</p>
+</body>
+</html>
+';
 
-// the message
-$msg = "First line of text\nSecond line of text";
+//para o envio em formato HTML
+$headers = "MIME-Version: 1.0
+";
+$headers .= "Content-type: text/html;
+charset=iso-8859-1
+";
 
-// use wordwrap() if lines are longer than 70 characters
-$msg = wordwrap($msg,70);
+//endereço do remitente
+$headers .= "From: Xuxé <deyvescarvalho@hotmail.com>
+";
 
-// send email
-mail("deyvescarvalho@gmail.com","My subject",$msg);
+//endereço de resposta, se queremos que seja diferente a do remitente
+$headers .= "Reply-To: deyvescarvalho@hotmail.com
+";
+
+//endereços que receberão uma copia $headers .= "Cc: manel@desarrolloweb.com
+";
+//endereços que receberão uma copia oculta
+$headers .= "Bcc: deyvescarvalho@gmail.com
+";
+try {
+  mail($destinatario,$assunto,$corpo,$headers)
+} catch (Exception $e) {
+  print "O erro". $e;
+}
+
 
 ?>
