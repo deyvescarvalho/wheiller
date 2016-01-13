@@ -24,7 +24,7 @@
 //   echo" <td>$email</td>";
 //   echo" <td>$senha</td>";
 // }
-
+//
 $msg = null;
 if(isset($_POST["phpmailer"]))
 {
@@ -37,11 +37,11 @@ if(isset($_POST["phpmailer"]))
 	require "class.phpmailer.php";
 
 	$mail = new PHPMailer;
-	$mail->Host = "localhost";
-	$mail->From = 'deyvescarvalho@gmail.com';
-	$mail->Subject = 'deyvescarvalho@gmail.comasd';
-	$mail->addAddress("deyvescarvalho@gmail.com", 'asdds');
-	$mail->MsgHTML('asd', 'asd', 'asddd', 'asddsa', 'asdsasd');
+	$mail->Host = "smtp.gmail.com";
+	$mail->From = $email;
+	$mail->Subject = $assunto;
+	$mail->addAddress("deyvescarvalho@gmail.com", $nome);
+	$mail->MsgHTML($mensagem, $nome, $email, $assunto, $mensagem);
 
 	if($anexo["size"] > 0)
 	{
