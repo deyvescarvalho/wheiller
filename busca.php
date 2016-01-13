@@ -44,9 +44,8 @@ $headers = "Return-Path: ".$emailsender.$quebra_linha;
 // $headers = "Bcc: ".$comcopiaoculta.$quebra_linha;
 // $headers = "Reply-To: ".$emailsender.$quebra_linha;
 
-if(!mail($emaildestinatario, $assunto, $mensagemHTML, $headers ,"-r".$emailsender)){ // Se for Postfix
-    $headers .= "Return-Path: " . $emailsender . $quebra_linha; // Se "não for Postfix"
-    mail($emaildestinatario, $assunto, $mensagemHTML, $headers );
+if (bool mail ( string $emailsender , string $assunto , string $mensagem [, string $emaildestinatario [, string $additional_parameters ]] )) {
+print "asd";
 }
 
 ?>
