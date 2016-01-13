@@ -44,10 +44,9 @@ $headers = "Cc: ".$comcopia.$quebra_linha;
 $headers = "Bcc: ".$comcopiaoculta.$quebra_linha;
 $headers = "Reply-To: ".$emailsender.$quebra_linha;
 
-if (mail($emaildestinatario, $assunto, $mensagemHTML, $headers, "-r". $emailsender)) {
-print "Mensagem enviada com sucesso!";
-}else {
-  print "Não enviou";
+f(!mail($emaildestinatario, $assunto, $mensagemHTML, $headers ,"-r".$emailsender)){ // Se for Postfix
+    $headers .= "Return-Path: " . $emailsender . $quebra_linha; // Se "não for Postfix"
+    mail($emaildestinatario, $assunto, $mensagemHTML, $headers );
 }
 
 ?>
