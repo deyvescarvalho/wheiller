@@ -37,6 +37,7 @@
         <div class="row">
           <button type="button" id="btn1" name="button" style="float: right;" class="btn btn-default"> Avançar</button>
         </div>
+        <input type="submit" value="asd">asd 
       </section>
 
       <!-- <h1 class="pass2 text-center"> ABERTURA DO VÍDEO</h1>
