@@ -74,14 +74,14 @@ $message = '
 ';
 
 // To send HTML mail, the Content-type header must be set
-$headers  = 'MIME-Version: 1.0' . "\r\n";
-$headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
+$headers  = 'MIME-Version: 1.0' . "\n";
+$headers .= 'Content-type: text/html; charset=iso-8859-1' . "\n";
 
 // Additional headers
-$headers .= 'To: Mary <deyvescarvalho@gmail.com>, Kelly <deyvescarvalho@gmail.com>' . "\r\n";
-$headers .= 'From: Birthday Reminder <deyvescarvalho@gmail.com>' . "\r\n";
-$headers .= 'Cc: deyvescarvalho@gmail.com' . "\r\n";
-$headers .= 'Bcc: deyvescarvalho@gmail.com' . "\r\n";
+$headers .= 'To: Mary <deyvescarvalho@gmail.com>, Kelly <deyvescarvalho@gmail.com>' . "\n";
+$headers .= 'From: Birthday Reminder <deyvescarvalho@gmail.com>' . "\n";
+$headers .= 'Cc: deyvescarvalho@gmail.com' . "\n";
+$headers .= 'Bcc: deyvescarvalho@gmail.com' . "\n";
 
 // Mail it
 mail($to, $subject, $message, $headers);
