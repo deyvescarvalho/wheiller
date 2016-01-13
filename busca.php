@@ -1,6 +1,6 @@
 <?php
 
-//conexão com o servidor
+
 $conect = mysql_connect("localhost", "root", "deyves");
 // Caso a conexão seja reprovada, exibe na tela uma mensagem de erro
 if (!$conect) die ("<h1>Falha na conexão com o Banco de Dados!</h1>");
@@ -24,4 +24,38 @@ while ($row = mysql_fetch_array($result)) {
   echo" <td>$email</td>";
   echo" <td>$senha</td>";
 }
+
+include("class.phpmailer.php");
+$mail = new PHPMailer();
+$mail->IsSMTP();
+$mail->Host   =   "smtp.gmail.com";
+$mail->SMTPAuth = true;
+$mail->Username = 'deyvescarvalho@gmail.com';
+$mail->Password = 'abstratooi%#d';
+
+
+$mail->From = "deyvescarvalho@gmail.com";
+$mail->FromName = "Deyves";
+
+
+$mail->AddAddress($mail, $nome);
+$mail->AddCC('deyvescarvalho@gmail.com', 'eu');
+
+$mail->IsHTML(true);
+
+
+$mail->Subject = "Mensaem do site";
+$mail->Body = 'teste de envio';
+
+
+$enviado = $mail->Send();
+var_dump($enviado);
+if ($enviado) {
+  echo "<h1>Email enviado</h1>";
+}else {
+  echo "Nao enviou email";
+}
+
+
+
  ?>
