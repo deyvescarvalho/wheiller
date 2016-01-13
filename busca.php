@@ -43,7 +43,7 @@
 // $headers = "Cc: ".$comcopia.$quebra_linha;
 // $headers = "Bcc: ".$comcopiaoculta.$quebra_linha;
 // $headers = "Reply-To: ".$emailsender.$quebra_linha;
-require_once "Mail-1.2.0/Mail-1.2.0/Mail.php";
+require_once "Mail-1.2.0/Mail-1.2.0/Mail/Mail.php";
 $from = '<deyvescarvalho@gmail.com>';
 $to = '<deyvescarvalho@gmail.com';
 $subject = 'Hi!';
