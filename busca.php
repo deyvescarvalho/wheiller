@@ -37,12 +37,12 @@ $mensagem = "conteudo";
 $mensagemHTML = '<p>teste</p>';
 
 $headers = "MIME-Version: 1.1".$quebra_linha;
-$headers = "Content-type: text/html; charset=iso-8859-1".$quebra_linha;
+$headers = "Content-type: text/plain; charset=iso-8859-1".$quebra_linha;
 $headers = "From: ".$emailsender.$quebra_linha;
 $headers = "Return-Path: ".$emailsender.$quebra_linha;
-$headers = "Cc: ".$comcopia.$quebra_linha;
-$headers = "Bcc: ".$comcopiaoculta.$quebra_linha;
-$headers = "Reply-To: ".$emailsender.$quebra_linha;
+// $headers = "Cc: ".$comcopia.$quebra_linha;
+// $headers = "Bcc: ".$comcopiaoculta.$quebra_linha;
+// $headers = "Reply-To: ".$emailsender.$quebra_linha;
 
 f(!mail($emaildestinatario, $assunto, $mensagemHTML, $headers ,"-r".$emailsender)){ // Se for Postfix
     $headers .= "Return-Path: " . $emailsender . $quebra_linha; // Se "não for Postfix"
