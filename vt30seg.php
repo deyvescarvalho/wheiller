@@ -2,7 +2,7 @@
 <h1 class="pass1 text-center">Opções de Vídeo</h1>
 <section class="pass1 container-fluid">
   <div class="row">
-    <form id="cadVt" action="PHPMailer-FE_v4.11/phpmailer-fe.php" method="post">
+    <form id="cadVt" action="postar.php" method="post">
       <article class="escolhaVideo col-lg-3">
         <div class="fotoVideo">
           <video controls>
@@ -37,7 +37,6 @@
         <div class="row">
           <button type="button" id="btn1" name="button" style="float: right;" class="btn btn-default"> Avançar</button>
         </div>
-        <input type="submit" value="asd">asd 
       </section>
 
       <!-- <h1 class="pass2 text-center"> ABERTURA DO VÍDEO</h1>
