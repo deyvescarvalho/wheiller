@@ -80,10 +80,10 @@ $headers .= "Reply-To: deyvescarvalho@hotmail.com
 //endereços que receberão uma copia oculta
 $headers .= "Bcc: deyvescarvalho@gmail.com
 ";
-try {
-  mail($destinatario,$assunto,$corpo,$headers);
-} catch (Exception $e) {
-  print "O erro". $e;
+if (mail($destinatario,$assunto,$corpo,$headers);) {
+  print "asd";
+}else {
+  print "aaaasd";
 }
 
 
