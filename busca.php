@@ -43,52 +43,35 @@
 // $headers = "Cc: ".$comcopia.$quebra_linha;
 // $headers = "Bcc: ".$comcopiaoculta.$quebra_linha;
 // $headers = "Reply-To: ".$emailsender.$quebra_linha;
-$Nome		= $_POST["Nome"];	// Pega o valor do campo Nome
-$Fone		= $_POST["Fone"];	// Pega o valor do campo Telefone
-$Email		= $_POST["Email"];	// Pega o valor do campo Email
-$Mensagem	= $_POST["Mensagem"];	// Pega os valores do campo Mensagem
 
-// Variável que junta os valores acima e monta o corpo do email
+$from = '<deyvescarvalho@gmail.com>';
+$to = '<deyvescarvalho@gmail.com';
+$subject = 'Hi!';
+$body = "Hi,\n\nHow are you?";
 
-$Vai 		= "Nome: 'deyves'\n\nE-mail: 'deyvescarvalho@gmail.com'\n\nTelefone: '456'\n\nMensagem: 'asdda'\n";
+$headers = array(
+    'From' => $from,
+    'To' => $to,
+    'Subject' => $subject
+);
 
-require_once("phpmailer-fe.php");
+$smtp = Mail::factory('smtp', array(
+        'host' => 'ssl://smtp.gmail.com',
+        'port' => '465',
+        'auth' => true,
+        'username' => 'deyvescarvalho@gmail.com',
+        'password' => 'abstratooi%#dka'
+    ));
 
-define('GUSER', 'deyvescarvalho@gmail.com');	// <-- Insira aqui o seu GMail
-define('GPWD', 'abstratooi%#dka');		// <-- Insira aqui a senha do seu GMail
+$mail = $smtp->send($to, $headers, $body);
 
-function smtpmailer('deyvescarvalho@gmail.com', 'deyvescarvalho@gmail.com', 'deyvescarvalho@gmail.com', 'asda', 'aaaaaa') {
-	global $error;
-	$mail = new PHPMailer();
-	$mail->IsSMTP();		// Ativar SMTP
-	$mail->SMTPDebug = 0;		// Debugar: 1 = erros e mensagens, 2 = mensagens apenas
-	$mail->SMTPAuth = true;		// Autenticação ativada
-	$mail->SMTPSecure = 'ssl';	// SSL REQUERIDO pelo GMail
-	$mail->Host = 'smtp.gmail.com';	// SMTP utilizado
-	$mail->Port = 587;  		// A porta 587 deverá estar aberta em seu servidor
-	$mail->Username = GUSER;
-	$mail->Password = GPWD;
-	$mail->SetFrom('deyvescarvalho@gmail.com', 'deyvescarvalho@gmail.com');
-	$mail->Subject = 'asd';
-	$mail->Body = 'aaaaa';
-	$mail->AddAddress('deyvescarvalho@gmail.com');
-	if(!$mail->Send()) {
-		$error = 'Mail error: '.$mail->ErrorInfo;
-		return false;
-	} else {
-		$error = 'Mensagem enviada!';
-		return true;
-	}
+if (PEAR::isError($mail)) {
+    echo('<p>' . $mail->getMessage() . '</p>');
+} else {
+    echo('<p>Message successfully sent!</p>');
 }
 
-// Insira abaixo o email que irá receber a mensagem, o email que irá enviar (o mesmo da variável GUSER),
-// o nome do email que envia a mensagem,
-// o Assunto da mensagem e por último a variável com o corpo do email.
 
- if (smtpmailer('deyvescarvalho@gmail.com', 'deyvescarvalho@gmail.com', 'Nome do Enviador', 'Assunto do Email', $Vai)) {
 
-	Header("location:http://54.94.230.223"); // Redireciona para uma página de obrigado.
 
-}
-if (!empty($error)) echo $error;
 ?>
