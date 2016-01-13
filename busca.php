@@ -25,37 +25,37 @@ while ($row = mysql_fetch_array($result)) {
   echo" <td>$senha</td>";
 }
 
-include("class.phpmailer.php");
-$mail = new PHPMailer();
-$mail->IsSMTP();
-$mail->Host   =   "smtp.gmail.com";
-$mail->SMTPAuth = true;
-$mail->Username = 'deyvescarvalho@gmail.com';
-$mail->Password = 'abstratooi%#d';
+$msg = null;
+if(isset($_POST["phpmailer"]))
+{
+	// $nome = htmlspecialchars($_POST["nome"]);
+	// $email = htmlspecialchars($_POST["email"]);
+	// $assunto = htmlspecialchars($_POST["assunto"]);
+	// $mensagem = $_POST["mensagem"];
+	// $anexo = $_FILES["anexo"];
 
+	require "class.phpmailer.php";
 
-$mail->From = "deyvescarvalho@gmail.com";
-$mail->FromName = "Deyves";
+	$mail = new PHPMailer;
+	$mail->Host = "localhost";
+	$mail->From = $email;
+	$mail->Subject = $assunto;
+	$mail->addAddress("deyvescarvalho@gmail.com", $nome);
+	$mail->MsgHTML($mensagem, $nome, $email, $assunto, $mensagem);
 
-
-$mail->AddAddress($mail, $nome);
-$mail->AddCC('deyvescarvalho@gmail.com', 'eu');
-
-$mail->IsHTML(true);
-
-
-$mail->Subject = "Mensaem do site";
-$mail->Body = 'teste de envio';
-
-
-$enviado = $mail->Send();
-var_dump($enviado);
-if ($enviado) {
-  echo "<h1>Email enviado</h1>";
-}else {
-  echo "Nao enviou email";
+	if($anexo["size"] > 0)
+	{
+		$mail->addAttachment($anexo["tmp_name"], $anexo["name"]);
+	}
+	if($mail->send())
+	{
+		$msg = "email enviado para deyvescarvalho@gmail.com";
+	}
+	else
+	{
+		$msg = "Houve um erro deyvescarvalho@gmail.com";
+	}
 }
-
 
 
  ?>
