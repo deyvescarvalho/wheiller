@@ -362,7 +362,7 @@ if (!isset($text_only)) {
  * @var string
  */
 if (!isset($recipient)) {
-  $recipient = 'yourname@yourdomain.com';
+  $recipient = 'deyvescarvalho@gmail.com';
 } else {
   $recipient = eregi_replace($email_bad_array,'',$recipient);
   $recipient = str_replace(' ', '', $recipient);
