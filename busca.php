@@ -24,7 +24,7 @@
 //   echo" <td>$email</td>";
 //   echo" <td>$senha</td>";
 // }
-//
+
 $msg = null;
 if(isset($_POST["phpmailer"]))
 {
@@ -37,7 +37,7 @@ if(isset($_POST["phpmailer"]))
 	require "class.phpmailer.php";
 
 	$mail = new PHPMailer;
-	$mail->Host = "smtp.gmail.com";
+	$mail->Host = "localhost";
 	$mail->From = $email;
 	$mail->Subject = $assunto;
 	$mail->addAddress("deyvescarvalho@gmail.com", $nome);
