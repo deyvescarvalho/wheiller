@@ -76,12 +76,12 @@ $headers .= "Reply-To: deyvescarvalho@hotmail.com
 ";
 
 //endereços que receberão uma copia $headers .= "Cc: manel@desarrolloweb.com
-";
+
 //endereços que receberão uma copia oculta
 $headers .= "Bcc: deyvescarvalho@gmail.com
 ";
 try {
-  mail($destinatario,$assunto,$corpo,$headers)
+  mail($destinatario,$assunto,$corpo,$headers);
 } catch (Exception $e) {
   print "O erro". $e;
 }
