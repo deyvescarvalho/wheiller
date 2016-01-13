@@ -43,15 +43,16 @@ $mensagemHTML = '<p>teste</p>';
 // $headers = "Cc: ".$comcopia.$quebra_linha;
 // $headers = "Bcc: ".$comcopiaoculta.$quebra_linha;
 // $headers = "Reply-To: ".$emailsender.$quebra_linha;
+function mail_utf8($emailsender, $emailsender, $emailsender,
+                                             $subject = '(No subject)', $message = 'asd')
+   {
+      $emailsender = "=?UTF-8?B?".base64_encode($emailsender)."?=";
+      $subject = "=?UTF-8?B?".base64_encode($subject)."?=";
 
-$headers   = array();
-$headers[] = "MIME-Version: 1.0";
-$headers[] = "Content-type: text/plain; charset=iso-8859-1";
-$headers[] = "From: Sender Name <deyvescarvalho@gmail.com>";
-$headers[] = "Bcc: JJ Chong <deyvescarvalho@gmail.com>";
-$headers[] = "Reply-To: Recipient Name <deyvescarvalho@gmail.com>";
-$headers[] = "Subject: {$assunto}";
-$headers[] = "X-Mailer: PHP/".phpversion();
+      $headers = "From: $from_user <$emailsender>\r\n".
+               "MIME-Version: 1.0" . "\r\n" .
+               "Content-type: text/html; charset=UTF-8" . "\r\n";
 
-mail($emailsender, $assunto, $emailsender, implode("\r\n", $headers));
+     return mail($emailsender, $subject, $message, $headers);
+   }
 ?>
