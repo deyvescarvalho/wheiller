@@ -44,34 +44,23 @@
 // $headers = "Bcc: ".$comcopiaoculta.$quebra_linha;
 // $headers = "Reply-To: ".$emailsender.$quebra_linha;
 require_once "Mail-1.2.0/Mail-1.2.0/Mail/Mail.php";
-$from = '<deyvescarvalho@gmail.com>';
-$to = '<deyvescarvalho@gmail.com';
-$subject = 'Hi!';
-$body = "Hi,\n\nHow are you?";
-
-$headers = array(
-    'From' => $from,
-    'To' => $to,
-    'Subject' => $subject
-);
-
-$smtp = Mail::factory('smtp', array(
-        'host' => 'ssl://smtp.gmail.com',
-        'port' => '465',
-        'auth' => true,
-        'username' => 'deyvescarvalho@gmail.com',
-        'password' => 'abstratooi%#dka'
-    ));
-
-$mail = $smtp->send($to, $headers, $body);
-
-if (PEAR::isError($mail)) {
-    echo('<p>' . $mail->getMessage() . '</p>');
-} else {
-    echo('<p>Message successfully sent!</p>');
-}
 
 
+
+$recipients = 'deyvescarvalho@gmail.com';
+
+$headers['From']    = 'deyvescarvalho@gmail.com';
+$headers['To']      = 'deyvescarvalho@gmail.com';
+$headers['Subject'] = 'Test message';
+
+$body = 'Test message';
+
+$params['sendmail_path'] = '/usr/lib/sendmail';
+
+// Create the mail object using the Mail::factory method
+$mail_object =& Mail::factory('sendmail', $params);
+
+$mail_object->send($recipients, $headers, $body);
 
 
 ?>
