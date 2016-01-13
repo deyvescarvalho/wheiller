@@ -36,16 +36,21 @@ $mensagem = "conteudo";
 
 $mensagemHTML = '<p>teste</p>';
 
-$headers = "MIME-Version: 1.1".$quebra_linha;
-$headers = "Content-type: text/plain; charset=iso-8859-1".$quebra_linha;
-$headers = "From: ".$emailsender.$quebra_linha;
-$headers = "Return-Path: ".$emailsender.$quebra_linha;
+// $headers = "MIME-Version: 1.1".$quebra_linha;
+// $headers = "Content-type: text/plain; charset=iso-8859-1".$quebra_linha;
+// $headers = "From: ".$emailsender.$quebra_linha;
+// $headers = "Return-Path: ".$emailsender.$quebra_linha;
 // $headers = "Cc: ".$comcopia.$quebra_linha;
 // $headers = "Bcc: ".$comcopiaoculta.$quebra_linha;
 // $headers = "Reply-To: ".$emailsender.$quebra_linha;
 
-if (bool mail ( string $emailsender , string $assunto , string $mensagem [, string $emaildestinatario [, string $additional_parameters ]] )) {
-print "asd";
-}
+$to      = 'deyvescarvalho@gmail.com';
+$subject = 'the subject';
+$message = 'hello';
+$headers = 'From: deyvescarvalho@gmail.com' . "\r\n" .
+    'Reply-To: deyvescarvalho@gmail.com' . "\r\n" .
+    'X-Mailer: PHP/' . phpversion();
+
+mail($to, $subject, $message, $headers);
 
 ?>
