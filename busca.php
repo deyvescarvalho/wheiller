@@ -60,9 +60,9 @@ $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, 
 $mail->Port = 587;                                    // TCP port to connect to
 $mail->setLanguage('br');
 
-$mail->setFrom('deyvescarvalho@gmail.com', 'Mailer');
-$mail->addAddress('deyvescarvalho@gmail.com', 'Joe User');     // Add a recipient
-$mail->addReplyTo('deyvescarvalho@hotmail.com', 'Information');
+$mail->setFrom('deyvescarvalho@gmail.com');
+$mail->addAddress('deyvescarvalho@gmail.com');     // Add a recipient
+$mail->addReplyTo('deyvescarvalho@gmail.com');
 //$mail->addCC('cc@example.com');
 //$mail->addBCC('bcc@example.com');
 
