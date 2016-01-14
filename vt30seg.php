@@ -31,7 +31,7 @@
                 <input type="radio"  id="vt3" class="tipodovt" name="opcaoVt" value="vt03"> Escolher
               </div>
             </article>
-          </form>
+
         </div>
         <br>
         <div class="row">
@@ -39,7 +39,7 @@
         </div>
       </section>
 
-      <!-- <h1 class="pass2 text-center"> ABERTURA DO VÍDEO</h1>
+       <h1 class="pass2 text-center"> ABERTURA DO VÍDEO</h1>
       <section class="pass2 container-fluid passo2">
         <div class="row">
           <aside>
@@ -327,7 +327,7 @@
           console.log(dadoEmpresa);
         });
       });
-      </script> -->
+      </script>
       <input type="button" id="salvar" value="salvar">
 
       <script type="text/javascript" language="javascript">
@@ -338,7 +338,7 @@
           $.ajax({
             type: 'POST',
             dataType: 'json',
-            url: 'salvar.php',
+            url: 'busca.php',
             async: true,
             data: dados,
             success: function(response) {

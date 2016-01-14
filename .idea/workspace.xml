@@ -48,13 +48,51 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="busca.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="vt30seg.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/vt30seg.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.5164645">
+              <caret line="340" column="23" selection-start-line="340" selection-start-column="23" selection-end-line="340" selection-end-column="23" />
+              <folding>
+                <element signature="n#style#0;n#h4#0;n#div#1;n#section#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#0;n#div#2;n#section#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h4#0;n#div#1;n#section#2;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#0;n#div#2;n#section#2;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#textarea#0;n#div#8;n#form#0;n#div#0;n#div#0;n#section#3;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h4#0;n#div#1;n#section#3;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#0;n#div#2;n#section#3;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#textarea#0;n#div#8;n#form#0;n#div#0;n#div#0;n#section#4;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h4#0;n#div#1;n#section#4;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#0;n#div#2;n#section#4;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#textarea#0;n#div#8;n#form#0;n#div#0;n#div#0;n#section#5;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h4#0;n#div#1;n#section#5;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#0;n#div#2;n#section#5;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h4#0;n#div#1;n#section#6;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#0;n#div#2;n#section#6;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="salvar.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/salvar.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-14.0">
+              <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="22" selection-end-column="28" />
+              <folding>
+                <marker date="1452568133177" expanded="true" signature="638:739" placeholder="INSERT INTO ..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="busca.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/busca.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.093587525">
-              <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+            <state vertical-scroll-proportion="-6.037037">
+              <caret line="53" column="79" selection-start-line="53" selection-start-column="79" selection-end-line="53" selection-end-column="79" />
               <folding>
-                <marker date="1452741460650" expanded="true" signature="574:630" placeholder="SELECT * FRO..USUARIO..." />
+                <marker date="1452742051645" expanded="true" signature="574:630" placeholder="SELECT * FRO..USUARIO..." />
               </folding>
             </state>
           </provider>
@@ -79,13 +117,13 @@
         <option value="$PROJECT_DIR$/passo3.php" />
         <option value="$PROJECT_DIR$/passo4.php" />
         <option value="$PROJECT_DIR$/oferta2.php" />
-        <option value="$PROJECT_DIR$/vt30seg.php" />
         <option value="$PROJECT_DIR$/estudosdemean/eventos.js" />
         <option value="$PROJECT_DIR$/estudosdemean/webserver.js" />
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/vendor/phpmailer/phpmailer/.gitignore" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/busca.php" />
+        <option value="$PROJECT_DIR$/vt30seg.php" />
       </list>
     </option>
   </component>
@@ -331,7 +369,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1452741460650" expanded="true" signature="574:630" placeholder="SELECT * FRO..USUARIO..." />
+            <marker date="1452742051645" expanded="true" signature="574:630" placeholder="SELECT * FRO..USUARIO..." />
           </folding>
         </state>
       </provider>
@@ -583,13 +621,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vt30seg.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9289428">
-          <caret line="189" column="10" selection-start-line="189" selection-start-column="10" selection-end-line="189" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/passo4.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.9289428">
@@ -638,10 +669,44 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/busca.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.093587525">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+        <state vertical-scroll-proportion="-6.037037">
+          <caret line="53" column="79" selection-start-line="53" selection-start-column="79" selection-end-line="53" selection-end-column="79" />
           <folding>
-            <marker date="1452741460650" expanded="true" signature="574:630" placeholder="SELECT * FRO..USUARIO..." />
+            <marker date="1452742051645" expanded="true" signature="574:630" placeholder="SELECT * FRO..USUARIO..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/salvar.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-14.0">
+          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="22" selection-end-column="28" />
+          <folding>
+            <marker date="1452568133177" expanded="true" signature="638:739" placeholder="INSERT INTO ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vt30seg.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5164645">
+          <caret line="340" column="23" selection-start-line="340" selection-start-column="23" selection-end-line="340" selection-end-column="23" />
+          <folding>
+            <element signature="n#style#0;n#h4#0;n#div#1;n#section#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#div#2;n#section#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h4#0;n#div#1;n#section#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#div#2;n#section#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#textarea#0;n#div#8;n#form#0;n#div#0;n#div#0;n#section#3;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h4#0;n#div#1;n#section#3;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#div#2;n#section#3;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#textarea#0;n#div#8;n#form#0;n#div#0;n#div#0;n#section#4;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h4#0;n#div#1;n#section#4;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#div#2;n#section#4;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#textarea#0;n#div#8;n#form#0;n#div#0;n#div#0;n#section#5;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h4#0;n#div#1;n#section#5;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#div#2;n#section#5;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h4#0;n#div#1;n#section#6;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#div#2;n#section#6;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -28,7 +28,8 @@ require 'vendor/phpmailer/phpmailer/PHPMailerAutoload.php';
      $mail = new PHPMailer;
 
 //$mail->SMTPDebug = 3;                               // Enable verbose debug output
-
+     $response = array("success" => true);
+     echo json_encode($response);
      $mail->isSMTP();                                      // Set mailer to use SMTP
      $mail->Host = 'email-smtp.us-west-2.amazonaws.com';  // Specify main and backup SMTP servers
      $mail->SMTPAuth = true;                               // Enable SMTP authentication
@@ -49,8 +50,8 @@ require 'vendor/phpmailer/phpmailer/PHPMailerAutoload.php';
 //$mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
      $mail->isHTML(true);                                  // Set email format to HTML
 
-     $mail->Subject = 'Here is the subject '.$email;
-     $mail->Body    = 'This is the HTML message body <b>in bold!</b>';
+     $mail->Subject = 'Here is the subject '.$id;
+     $mail->Body    = 'This is the HTML message body <b>in bold!</b>'.$response;
      $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
      if(!$mail->send()) {
