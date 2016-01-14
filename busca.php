@@ -43,24 +43,42 @@
 // $headers = "Cc: ".$comcopia.$quebra_linha;
 // $headers = "Bcc: ".$comcopiaoculta.$quebra_linha;
 // $headers = "Reply-To: ".$emailsender.$quebra_linha;
-require_once "Mail-1.2.0/Mail-1.2.0/Mail.php";
 
 
+require '/vendor/autoload.php';
 
-$recipients = 'deyvescarvalho@gmail.com';
+$mail = new PHPMailer;
 
-$headers['From']    = 'deyvescarvalho@gmail.com';
-$headers['To']      = 'deyvescarvalho@gmail.com';
-$headers['Subject'] = 'Test message';
+//$mail->SMTPDebug = 3;                               // Enable verbose debug output
 
-$body = 'Test message';
+$mail->isSMTP();                                      // Set mailer to use SMTP
+$mail->Host = 'smt.gmail.com';  // Specify main and backup SMTP servers
+$mail->SMTPAuth = true;                               // Enable SMTP authentication
+$mail->Username = 'deyvescarvalho@gmail.com';                 // SMTP username
+$mail->Password = 'abstratooi%#dka';                           // SMTP password
+$mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
+$mail->Port = 587;                                    // TCP port to connect to
 
-$params['sendmail_path'] = '/usr/lib/sendmail';
+$mail->setFrom('deyvescarvalho@gmail.com', 'Mailer');
+$mail->addAddress('deyvescarvalho@gmail.com', 'Joe User');     // Add a recipient
+$mail->addAddress('ellen@example.com');               // Name is optional
+$mail->addReplyTo('info@example.com', 'Information');
+$mail->addCC('cc@example.com');
+$mail->addBCC('bcc@example.com');
 
-// Create the mail object using the Mail::factory method
-$mail_object =& Mail::factory('sendmail', $params);
+$mail->addAttachment('/var/tmp/file.tar.gz');         // Add attachments
+$mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
+$mail->isHTML(true);                                  // Set email format to HTML
 
-$mail_object->send($recipients, $headers, $body);
+$mail->Subject = 'Here is the subject';
+$mail->Body    = 'This is the HTML message body <b>in bold!</b>';
+$mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
+if(!$mail->send()) {
+    echo 'Message could not be sent.';
+    echo 'Mailer Error: ' . $mail->ErrorInfo;
+} else {
+    echo 'Message has been sent';
+}
 
 ?>
