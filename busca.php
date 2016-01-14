@@ -28,6 +28,8 @@ require 'vendor/phpmailer/phpmailer/PHPMailerAutoload.php';
      $mail = new PHPMailer;
 
 //$mail->SMTPDebug = 3;                               // Enable verbose debug output
+     $dados = $_POST['formvalendo'];
+     $dados = serialize($dados);
      $response = array("success" => true);
      echo json_encode($response);
      $mail->isSMTP();                                      // Set mailer to use SMTP
@@ -51,7 +53,7 @@ require 'vendor/phpmailer/phpmailer/PHPMailerAutoload.php';
      $mail->isHTML(true);                                  // Set email format to HTML
 
      $mail->Subject = 'Here is the subject '.$id;
-     $mail->Body    = 'This is the HTML message body <b>in bold!</b>'.$response;
+     $mail->Body    = 'This is the HTML message body <b>in bold!</b>'.$dados['opcaoVt'];
      $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
      if(!$mail->send()) {

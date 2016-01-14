@@ -48,11 +48,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="vt30seg.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="vt30seg.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vt30seg.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5164645">
-              <caret line="340" column="23" selection-start-line="340" selection-start-column="23" selection-end-line="340" selection-end-column="23" />
+            <state vertical-scroll-proportion="-1.3584906">
+              <caret line="4" column="38" selection-start-line="4" selection-start-column="38" selection-end-line="4" selection-end-column="38" />
               <folding>
                 <element signature="n#style#0;n#h4#0;n#div#1;n#section#1;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#button#0;n#div#2;n#section#1;n#!!top" expanded="true" />
@@ -77,22 +77,22 @@
       <file leaf-file-name="salvar.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/salvar.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-14.0">
-              <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="22" selection-end-column="28" />
+            <state vertical-scroll-proportion="-5.773585">
+              <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="25" />
               <folding>
-                <marker date="1452568133177" expanded="true" signature="638:739" placeholder="INSERT INTO ..." />
+                <marker date="1452742204746" expanded="true" signature="664:765" placeholder="INSERT INTO ..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="busca.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="busca.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/busca.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.037037">
-              <caret line="53" column="79" selection-start-line="53" selection-start-column="79" selection-end-line="53" selection-end-column="79" />
+            <state vertical-scroll-proportion="0.34146342">
+              <caret line="55" column="85" selection-start-line="55" selection-start-column="85" selection-end-line="55" selection-end-column="85" />
               <folding>
-                <marker date="1452742051645" expanded="true" signature="574:630" placeholder="SELECT * FRO..USUARIO..." />
+                <marker date="1452742749570" expanded="true" signature="574:630" placeholder="SELECT * FRO..USUARIO..." />
               </folding>
             </state>
           </provider>
@@ -122,8 +122,9 @@
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/vendor/phpmailer/phpmailer/.gitignore" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/busca.php" />
+        <option value="$PROJECT_DIR$/salvar.php" />
         <option value="$PROJECT_DIR$/vt30seg.php" />
+        <option value="$PROJECT_DIR$/busca.php" />
       </list>
     </option>
   </component>
@@ -299,7 +300,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297568" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296355" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3296355" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -369,7 +370,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1452742051645" expanded="true" signature="574:630" placeholder="SELECT * FRO..USUARIO..." />
+            <marker date="1452742749570" expanded="true" signature="574:630" placeholder="SELECT * FRO..USUARIO..." />
           </folding>
         </state>
       </provider>
@@ -667,30 +668,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/busca.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.037037">
-          <caret line="53" column="79" selection-start-line="53" selection-start-column="79" selection-end-line="53" selection-end-column="79" />
-          <folding>
-            <marker date="1452742051645" expanded="true" signature="574:630" placeholder="SELECT * FRO..USUARIO..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/salvar.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.0">
-          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="22" selection-end-column="28" />
+        <state vertical-scroll-proportion="-5.773585">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="25" />
           <folding>
-            <marker date="1452568133177" expanded="true" signature="638:739" placeholder="INSERT INTO ..." />
+            <marker date="1452742204746" expanded="true" signature="664:765" placeholder="INSERT INTO ..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/vt30seg.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5164645">
-          <caret line="340" column="23" selection-start-line="340" selection-start-column="23" selection-end-line="340" selection-end-column="23" />
+        <state vertical-scroll-proportion="-1.3584906">
+          <caret line="4" column="38" selection-start-line="4" selection-start-column="38" selection-end-line="4" selection-end-column="38" />
           <folding>
             <element signature="n#style#0;n#h4#0;n#div#1;n#section#1;n#!!top" expanded="true" />
             <element signature="n#style#0;n#button#0;n#div#2;n#section#1;n#!!top" expanded="true" />
@@ -707,6 +698,16 @@
             <element signature="n#style#0;n#button#0;n#div#2;n#section#5;n#!!top" expanded="true" />
             <element signature="n#style#0;n#h4#0;n#div#1;n#section#6;n#!!top" expanded="true" />
             <element signature="n#style#0;n#button#0;n#div#2;n#section#6;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/busca.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.34146342">
+          <caret line="55" column="85" selection-start-line="55" selection-start-column="85" selection-end-line="55" selection-end-column="85" />
+          <folding>
+            <marker date="1452742749570" expanded="true" signature="574:630" placeholder="SELECT * FRO..USUARIO..." />
           </folding>
         </state>
       </provider>

@@ -2,7 +2,7 @@
 <h1 class="pass1 text-center">Opções de Vídeo</h1>
 <section class="pass1 container-fluid">
   <div class="row">
-    <form id="cadVt" action="postar.php" method="post">
+    <form id="cadVt" name="formvalendo" action="postar.php" method="post">
       <article class="escolhaVideo col-lg-3">
         <div class="fotoVideo">
           <video controls>
@@ -328,7 +328,6 @@
         });
       });
       </script>
-      <input type="button" id="salvar" value="salvar">
 
       <script type="text/javascript" language="javascript">
       $(document).ready(function() {
