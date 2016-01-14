@@ -45,7 +45,7 @@
 // $headers = "Reply-To: ".$emailsender.$quebra_linha;
 
 
-require 'PHPMailerAutoload.php';
+require 'vendor/phpmailer/phpmailer/PHPMailerAutoload.php';
 
 $mail = new PHPMailer;
 
