@@ -1,5 +1,6 @@
 <?php
 
+require 'vendor/phpmailer/phpmailer/PHPMailerAutoload.php';
 
  $conect = mysql_connect("localhost", "root", "deyves");
  // Caso a conexão seja reprovada, exibe na tela uma mensagem de erro
@@ -23,45 +24,46 @@
    echo" <td>$nome</td>";
    echo" <td>$email</td>";
    echo" <td>$senha</td>";
- }
 
-
-require 'vendor/phpmailer/phpmailer/PHPMailerAutoload.php';
-
-$mail = new PHPMailer;
+     $mail = new PHPMailer;
 
 //$mail->SMTPDebug = 3;                               // Enable verbose debug output
 
-$mail->isSMTP();                                      // Set mailer to use SMTP
-$mail->Host = 'email-smtp.us-west-2.amazonaws.com';  // Specify main and backup SMTP servers
-$mail->SMTPAuth = true;                               // Enable SMTP authentication
-$mail->Username = 'AKIAI457JK2CS5MW4HOA';                 // SMTP username
-$mail->Password = 'An4zLD0UBjOhm0jg/GFt+Afub0TlIwRl6efkKdZMlNMi';                           // SMTP password
-$mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
-$mail->Port = 587;                                    // TCP port to connect to
-$mail->setLanguage('br');
+     $mail->isSMTP();                                      // Set mailer to use SMTP
+     $mail->Host = 'email-smtp.us-west-2.amazonaws.com';  // Specify main and backup SMTP servers
+     $mail->SMTPAuth = true;                               // Enable SMTP authentication
+     $mail->Username = 'AKIAI457JK2CS5MW4HOA';                 // SMTP username
+     $mail->Password = 'An4zLD0UBjOhm0jg/GFt+Afub0TlIwRl6efkKdZMlNMi';                           // SMTP password
+     $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
+     $mail->Port = 587;                                    // TCP port to connect to
+     $mail->setLanguage('br');
 
-$mail->setFrom('deyvescarvalho@gmail.com');
-$mail->addAddress('deyvescarvalho@gmail.com');     // Add a recipient
-$mail->addReplyTo('deyvescarvalho@gmail.com');
+     $mail->setFrom('deyvescarvalho@gmail.com');
+     $mail->addAddress('deyvescarvalho@gmail.com');     // Add a recipient
+     $mail->addReplyTo('deyvescarvalho@gmail.com');
 //$mail->addCC('cc@example.com');
 //$mail->addBCC('bcc@example.com');
 //$mail->addBCC('bcc@example.com');
 
 //$mail->addAttachment('/var/tmp/file.tar.gz');         // Add attachments
 //$mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
-$mail->isHTML(true);                                  // Set email format to HTML
+     $mail->isHTML(true);                                  // Set email format to HTML
 
-$mail->Subject = 'Here is the subject '.$email;
-$mail->Body    = 'This is the HTML message body <b>in bold!</b>';
-$mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
+     $mail->Subject = 'Here is the subject '.$email;
+     $mail->Body    = 'This is the HTML message body <b>in bold!</b>';
+     $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
-if(!$mail->send()) {
-    echo 'Message could not be sent.';
-    print 'Mailer Error: ' . $mail->ErrorInfo;
-} else {
-    echo 'Message has been sent';
-    print "asdasd";
-}
+     if(!$mail->send()) {
+         echo 'Message could not be sent.';
+         print 'Mailer Error: ' . $mail->ErrorInfo;
+     } else {
+         echo 'Message has been sent';
+         print "asdasd";
+     }
+
+ }
+
+
+
 
 ?>
