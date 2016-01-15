@@ -334,13 +334,12 @@
         /// Quando usuário clicar em salvar será feito todos os passo abaixo
         $('#salvar').click(function() {
           var dados = $('#cadVt').serialize();
-          var oferta = oferta.serialize();
           $.ajax({
             type: 'POST',
             dataType: 'json',
             url: 'busca.php',
             async: true,
-            data: dados,oferta,
+            data: dados,
             success: function(response) {
               location.reload();
             }

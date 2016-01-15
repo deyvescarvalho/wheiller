@@ -10,6 +10,19 @@ require 'vendor/phpmailer/phpmailer/PHPMailerAutoload.php';
  /*Configurando este arquivo, depois é só você dar um include em suas paginas php,
  isto facilita muito, pois caso haja necessidade de mudar seu Banco de Dados você altera
  somente um arquivo*/
+ $ofertas = $_POST['oferta'];
+ var_dump($ofertas);
+ print($ofertas);
+
+
+ $sql = "INSERT INTO USUARIO (NOME, EMAIL, SENHA)
+         VALUES ('$opcaoVt', '$txtAbertura', '$nomeCampanha')";
+ mysql_query($sql) or die(error());
+ $response = array("success" => true);
+ echo json_encode($response);
+
+
+
  $select = "SELECT * FROM USUARIO
  order by ID_USUARIO DESC
  limit 1";
@@ -29,10 +42,11 @@ require 'vendor/phpmailer/phpmailer/PHPMailerAutoload.php';
 
 //$mail->SMTPDebug = 3;                               // Enable verbose debug output
 $quebralina = '\n';
-$opcaoVt = $_POST['opcaoVt'].$quebralina;
-$txtAbertura = $_POST['txtAbertura'].$quebralina;
-$nomeCampanha = $_POST['nomeCampanha'].$quebralina;
-$ofertas = $_POST['oferta'].$quebralina;
+$opcaoVt = $_POST['opcaoVt'];
+$txtAbertura = $_POST['txtAbertura'];
+$nomeCampanha = $_POST['nomeCampanha'];
+
+$dadosOfertas = json_decode($_POST['dados']);
      $response = array("success" => true);
      echo json_encode($response);
      $mail->isSMTP();                                      // Set mailer to use SMTP
@@ -56,7 +70,11 @@ $ofertas = $_POST['oferta'].$quebralina;
      $mail->isHTML(true);                                  // Set email format to HTML
 
      $mail->Subject = 'Here is the subject '.$id;
-     $mail->Body    = 'MSG'.$quebralina, $opcaoVt, $txtAbertura, $nomeCampanha,
+     $mail->Body    = '<p>Opção do VT :</p> '.$opcaoVt.$quebralina
+      $mail->Body   .= '<p>Texto de abertura :</p>'.$txtAbertura.$quebralina
+      $mail->Body   .=  '<p>Nome da campanha :</p>'. $nomeCampanha.$quebralina
+
+
                       $ofertas;
      $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
