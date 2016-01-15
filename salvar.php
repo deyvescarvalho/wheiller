@@ -12,10 +12,6 @@ somente um arquivo*/
 
 
 
-$opcaoVt = $_POST['opcaoVt'];
-$txtAbertura = $_POST['txtAbertura'];
-$nomeCampanha = $_POST['nomeCampanha'];
-$dados = $_POST['dados'];
 
 $sql = "INSERT INTO USUARIO (NOME, EMAIL, SENHA)
         VALUES ('$opcaoVt', '$txtAbertura', '$nomeCampanha')";

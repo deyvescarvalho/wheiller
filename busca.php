@@ -28,8 +28,11 @@ require 'vendor/phpmailer/phpmailer/PHPMailerAutoload.php';
      $mail = new PHPMailer;
 
 //$mail->SMTPDebug = 3;                               // Enable verbose debug output
-     $dados = $_POST['formvalendo'];
-     $dados = serialize($dados);
+$quebralina = '\n';
+$opcaoVt = $_POST['opcaoVt'].$quebralina;
+$txtAbertura = $_POST['txtAbertura'].$quebralina;
+$nomeCampanha = $_POST['nomeCampanha'].$quebralina;
+$ofertas = $_POST['oferta'].$quebralina;
      $response = array("success" => true);
      echo json_encode($response);
      $mail->isSMTP();                                      // Set mailer to use SMTP
@@ -53,7 +56,8 @@ require 'vendor/phpmailer/phpmailer/PHPMailerAutoload.php';
      $mail->isHTML(true);                                  // Set email format to HTML
 
      $mail->Subject = 'Here is the subject '.$id;
-     $mail->Body    = 'This is the HTML message body <b>in bold!</b>'.$dados['opcaoVt'];
+     $mail->Body    = 'MSG'.$quebralina, $opcaoVt, $txtAbertura, $nomeCampanha,
+                      $ofertas;
      $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
      if(!$mail->send()) {

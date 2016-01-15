@@ -3,13 +3,14 @@
 <section class="pass1 container-fluid">
   <div class="row">
     <form id="cadVt" name="formvalendo" action="postar.php" method="post">
+
       <article class="escolhaVideo col-lg-3">
         <div class="fotoVideo">
           <video controls>
             <source src="videos/Javel.webm" type="video/webm">
               Your browser does not support the video tag.
             </video>
-            <input type="text" name="nomeCampanha">
+            <!-- <input type="text" name="nomeCampanha"> -->
             <input type="radio"  id="vt1" class="tipodovt" name="opcaoVt" value="vt01"> Escolher
           </div>
         </article>
@@ -142,7 +143,6 @@
         </div>
       </section>
 
-
       <h1 class="pass5 text-center"> OFERTA 2</h1>
       <section class="pass5 container-fluid oferta2">
         <div class="row">
@@ -265,8 +265,8 @@
             <h4 class="col-md-4 col-md-offset-4 text-center" style="color: #802420;">ATENÇÃO: Ao digitar o texto tenha lembre que a leitura deste texto não pode ultrapassar 5 segundos.</h4>
           </div>
           <div class="row">
-            <button type="button" id="btn7" name="button" style="float: right;" class="btn btn-default"> Avançar</button>
-            <input type="button" id="salvar" value="salvar">
+            <button type="button" id="salvar" name="button" style="float: right;" class="btn btn-default"> Finalizar</button>
+            <!-- <input type="button" id="salvar" value="salvar"> -->
           </div>
         </section>
       </form>
@@ -334,12 +334,13 @@
         /// Quando usuário clicar em salvar será feito todos os passo abaixo
         $('#salvar').click(function() {
           var dados = $('#cadVt').serialize();
+          var oferta = oferta.serialize();
           $.ajax({
             type: 'POST',
             dataType: 'json',
             url: 'busca.php',
             async: true,
-            data: dados,
+            data: dados,oferta,
             success: function(response) {
               location.reload();
             }
