@@ -10,9 +10,7 @@ require 'vendor/phpmailer/phpmailer/PHPMailerAutoload.php';
  /*Configurando este arquivo, depois é só você dar um include em suas paginas php,
  isto facilita muito, pois caso haja necessidade de mudar seu Banco de Dados você altera
  somente um arquivo*/
- $ofertas = $_POST['oferta'];
- var_dump($ofertas);
- print($ofertas);
+
 
 
  $sql = "INSERT INTO USUARIO (NOME, EMAIL, SENHA)
@@ -66,7 +64,7 @@ $dadosOfertas = json_decode($_POST['dados']);
 //$mail->addBCC('bcc@example.com');
 
 //$mail->addAttachment('/var/tmp/file.tar.gz');         // Add attachments
-//$mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
+$mail->addAttachment('/images/cliImg/img'.$id, 'new.jpg');    // Optional name
      $mail->isHTML(true);                                  // Set email format to HTML
 
      $mail->Subject = 'Here is the subject '.$id;
