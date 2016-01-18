@@ -122,10 +122,56 @@ $mail->addReplyTo('deyvescarvalho@gmail.com');
 // $mail->addAttachment('/images/cliImg/img'.$id, 'new.jpg');    // Optional name
 $mail->isHTML(true);                                  // Set email format to HTML
 
-$mail->Subject = 'Here is the subject '.$id;
+$mail->Subject = 'PRODUÇÃO DE VT'.$id;
+
+$mail->Body    = '<p>PRODUTO 1 :</p> '.$opcaoVt.$quebralina;
 $mail->Body    = '<p>Opção do VT :</p> '.$opcaoVt.$quebralina;
 $mail->Body   .= '<p>Texto de abertura :</p>'.$txtAbertura.$quebralina;
-$mail->Body   .=  '<p>Nome da campanha :</p>'. $nomeCampanha.$quebralina;
+$mail->Body   .=  '<p>Nome do Produto :</p>'. $nomeDoProduto.$quebralina;
+$mail->Body   .=  '<p>Caracteristica Do Produto :</p>'. $caracteristicaDoProduto.$quebralina;
+$mail->Body   .=  '<p>Valor a vista :</p>'. $valorAvista.$quebralina;
+$mail->Body   .=  '<p>Valor a prazo :</p>'. $valorAprazo.$quebralina;
+$mail->Body   .=  '<p>forma Pagamento :</p>'. $formaPagamento.$quebralina;
+$mail->Body   .=  '<p>Valor Entrada :</p>'. $valorEntrada.$quebralina;
+$mail->Body   .=  '<p>Valor Parcelas :</p>'. $valorParcelas.$quebralina;
+$mail->Body   .=  '<p>Quantidade de Parcelas :</p>'. $qtdParcelas.$quebralina;
+$mail->Body   .=  '<p>Texto Jurídico :</p>'. $txtJuridico.$quebralina;
+$mail->Body   .=  '<p>Valor Entrada :</p>'. $valorEntrada.$quebralina;
+
+
+$mail->Body   .=  '<p>PRODUTO 2 :</p>'.$quebralina.$quebralina;
+
+$mail->Body   .=  '<p>Nome Do Produto 2 :</p>'.$nomeDoProduto2.$quebralina;
+$mail->Body   .=  '<p>caracteristica Do Produto 2 :</p>'.$caracteristicaDoProduto2.$quebralina;
+$mail->Body   .=  '<p>valorAvista  :</p>'.$valorAvista2.$quebralina;
+$mail->Body   .=  '<p>valorAprazo :</p>'.$valorAprazo2.$quebralina;
+$mail->Body   .=  '<p>formaPagamento :</p>'.$formaPagamento2.$quebralina;
+$mail->Body   .=  '<p>valorEntrada :</p>'.$valorEntrada2.$quebralina;
+$mail->Body   .=  '<p>valorParcelas :</p>'.$valorParcelas2.$quebralina;
+$mail->Body   .=  '<p>qtdParcelas :</p>'.$qtdParcelas2.$quebralina;
+$mail->Body   .=  '<p>txtJuridico :</p>'.$txtJuridico2.$quebralina;
+
+
+$mail->Body   .=  '<p>PRODUTO 3:</p>'.$quebralina.$quebralina;
+
+
+$mail->Body   .=  '<p>nome Do Produto 3 :</p>'.$nomeDoProduto3.$quebralina;
+$mail->Body   .=  '<p>caracteristica Do Produto 3:</p>'.$caracteristicaDoProduto3.$quebralina;
+$mail->Body   .=  '<p>valorAvista :</p>'.$valorAvista3.$quebralina;
+$mail->Body   .=  '<p>valorAprazo :</p>'.$valorAprazo3.$quebralina;
+$mail->Body   .=  '<p>formaPagamento :</p>'.$formaPagamento3.$quebralina;
+$mail->Body   .=  '<p>valorEntrada :</p>'.$valorEntrada3.$quebralina;
+$mail->Body   .=  '<p>valorParcelas :</p>'.$valorParcelas3.$quebralina;
+$mail->Body   .=  '<p>qtdParcelas :</p>'.$qtdParcelas3.$quebralina;
+$mail->Body   .=  '<p>txtJuridico :</p>'.$txtJuridico3.$quebralina;
+
+
+
+$mail->Body   .=  '<p>nome Da Empresa :</p>'.$nomeEmpresa.$quebralina;
+$mail->Body   .=  '<p>endereco da Empresa :</p>'.$enderecoEmpresa.$quebralina;
+$mail->Body   .=  '<p>telefone da Empresa :</p>'.$telefoneEmpresa.$quebralina;
+$mail->Body   .=  '<p>slogan da Empresa :</p>'.$sloganEmpresa.$quebralina;
+$mail->Body   .=  '<p>Logomarca :</p>'.$logoEmpresa.$quebralina;
 
 
 // $ofertas;
