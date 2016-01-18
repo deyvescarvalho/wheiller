@@ -123,9 +123,9 @@ $mail->addReplyTo('deyvescarvalho@gmail.com');
 $mail->isHTML(true);                                  // Set email format to HTML
 
 $mail->Subject = 'Here is the subject '.$id;
-$mail->Body    = '<p>Opção do VT :</p> '.$opcaoVt.$quebralina
-$mail->Body   .= '<p>Texto de abertura :</p>'.$txtAbertura.$quebralina
-$mail->Body   .=  '<p>Nome da campanha :</p>'. $nomeCampanha.$quebralina
+$mail->Body    = '<p>Opção do VT :</p> '.$opcaoVt.$quebralina;
+$mail->Body   .= '<p>Texto de abertura :</p>'.$txtAbertura.$quebralina;
+$mail->Body   .=  '<p>Nome da campanha :</p>'. $nomeCampanha.$quebralina;
 
 
 // $ofertas;
@@ -133,10 +133,8 @@ $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
 if(!$mail->send()) {
   echo 'Message could not be sent.';
-  print 'Mailer Error: ' . $mail->ErrorInfo;
 } else {
   echo 'Message has been sent';
-  print "asdasd";
 }
 
 
