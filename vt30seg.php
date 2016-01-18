@@ -2,7 +2,7 @@
 <h1 class="pass1 text-center">Opções de Vídeo</h1>
 <section class="pass1 container-fluid">
   <div class="row">
-    <form id="cadVt" name="formvalendo" >
+    <form id="cadVt" name="formvalendo" method="POST" action="busca.php" >
       <article class="escolhaVideo col-lg-3">
         <div class="fotoVideo">
           <video controls>
@@ -328,7 +328,8 @@
             </div>
             <div class="row">
               <!-- <button type="button" id="salvar" name="button" style="float: right;" class="btn btn-default"> Finalizar</button> -->
-              <input type="button" id="salvar" name="button" class="btn btn-default" style="float: right;" value="Finalizar">
+              <!-- <input type="button" id="salvar" name="button" class="btn btn-default" style="float: right;" value="Finalizar"> -->
+              <input type="submit" id="salvar" name="button" class="btn btn-default" style="float: right;" value="Finalizar">
             </div>
           </section>
         </form>
@@ -391,7 +392,7 @@
         });
         </script>
 
-        <script type="text/javascript" language="javascript">
+        <!-- <script type="text/javascript" language="javascript">
         $(document).ready(function() {
           /// Quando usuário clicar em salvar será feito todos os passo abaixo
           $('#salvar').click(function() {
@@ -411,6 +412,6 @@
           });
         });
 
-        </script>
+        </script> -->
 
         <?php require_once 'footer.php';?>
