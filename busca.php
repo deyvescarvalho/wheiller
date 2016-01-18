@@ -118,7 +118,11 @@ $mail->addReplyTo('deyvescarvalho@gmail.com');
 //$mail->addBCC('bcc@example.com');
 //$mail->addBCC('bcc@example.com');
 //$mail->addAttachment('/var/tmp/file.tar.gz');         // Add attachments
-
+if (isset($_FILES['caminho']) &&
+    $_FILES['caminho']['error'] == UPLOAD_ERR_OK) {
+    $mail->AddAttachment($_FILES['caminho']['tmp_name'],
+                         $_FILES['caminho']['name']);
+}
 // $mail->addAttachment('/images/cliImg/img'.$id, 'new.jpg');    // Optional name
 $mail->isHTML(true);                                  // Set email format to HTML
 
