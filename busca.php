@@ -79,7 +79,8 @@ $enderecoEmpresa          = $_POST['enderecoEmpresa'];
 $telefoneEmpresa          = $_POST['telefoneEmpresa'];
 $sloganEmpresa            = $_POST['sloganEmpresa'];
 $logoEmpresa           = $_POST['caminho'];
-
+$produto1 = $_FILES['caminho'];
+$anexo2 = $_FILES['caminho'];
 
 
 
@@ -114,16 +115,10 @@ $mail->setLanguage('br');
 $mail->setFrom('deyvescarvalho@gmail.com');
 $mail->addAddress('deyvescarvalho@gmail.com');     // Add a recipient
 $mail->addReplyTo('deyvescarvalho@gmail.com');
-//$mail->addCC('cc@example.com');
-//$mail->addBCC('bcc@example.com');
-//$mail->addBCC('bcc@example.com');
-//$mail->addAttachment('/var/tmp/file.tar.gz');         // Add attachments
-if (isset($_FILES['caminho']) &&
-    $_FILES['caminho']['error'] == UPLOAD_ERR_OK) {
-    $mail->AddAttachment($_FILES['caminho']['tmp_name'],
-                         $_FILES['caminho']['name']);
-}
-// $mail->addAttachment('/images/cliImg/img'.$id, 'new.jpg');    // Optional name
+if($anexo["size"] > 0)
+	{
+		$mail->addAttachment($anexo["tmp_name"], $anexo["name"]);
+	}
 $mail->isHTML(true);                                  // Set email format to HTML
 
 $mail->Subject = 'PRODUÇÃO DE VT'.$id;

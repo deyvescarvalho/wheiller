@@ -2,7 +2,7 @@
 <h1 class="pass1 text-center">Opções de Vídeo</h1>
 <section class="pass1 container-fluid">
   <div class="row">
-    <form id="cadVt" name="formvalendo" method="POST" action="busca.php" >
+    <form id="cadVt" name="formvalendo" method="POST" action="busca.php"  >
       <article class="escolhaVideo col-lg-3">
         <div class="fotoVideo">
           <video controls>
@@ -121,13 +121,13 @@
               <div class="form-group col-md-6">
                 <input type="text" name="valorEntrada" id="vlrEntrada" placeholder="Valor de entrada" class="oferta form-control">
               </div>
-              <div class="form-group col-md-6">
+              <div class="form-group col-md-3">
                 <input type="text" name="valorParcelas" id="vlrParcelas" placeholder="Valor das parcelas" class="oferta form-control">
               </div>
               <div class="form-group col-md-6">
                 <input type="text" name="qtdParcelas" id="qtdParcelas" placeholder="Quantidade de parcelas" class="oferta form-control">
               </div>
-              <div class="form-group col-md-12">
+              <div class="form-group col-md-12 ">
                 <textarea name="txtJuridico" id="textoJuridico" placeholder="Texto Jurídico" class="oferta form-control" style="resize: none;" rows="6"></textarea>
               </div>
               <!-- </form> -->
