@@ -20,10 +20,14 @@ $mail->Username = 'deyvescarvalho@gmail.com';                 // SMTP username
 $mail->Password = 'abstratooi%#dka';                           // SMTP password
 $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
 $mail->Port = 587;                                    // TCP port to connect to
-$mail->setLanguage('br');
+// $mail->setLanguage('br');
 
 $mail->setFrom('deyvescarvalho@gmail.com');
 $mail->addAddress('deyvescarvalho@gmail.com');     // Add a recipient
+$mail->addAddress('ellen@example.com');               // Name is optional
+// $mail->addReplyTo('info@example.com', 'Information');
+$mail->addCC('cc@example.com');
+$mail->addBCC('bcc@example.com');
 $mail->addReplyTo('deyvescarvalho@gmail.com');
 
 
@@ -37,8 +41,6 @@ $mail->isHTML(true);                                  // Set email format to HTM
 $mail->Subject = 'PRODUÇÃO DE VT';
 
 $mail->Body   =  '<p>Texo1 :</p>'.$texto1;
-$mail->Body   .=  '<p>Texo2 :</p>'.$texto2;
-$mail->Body   .=  '<p>Texo3 :</p>'.$texto3;
 $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
 
@@ -46,6 +48,7 @@ $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
 if(!$mail->send()) {
 	echo 'Ocorreu uma falha, e não pode ser enviado.';
+	echo 'Mailer Error: ' . $mail->ErrorInfo;
 } else {
 	echo 'Pedido enviado com sucesso!';
 }
