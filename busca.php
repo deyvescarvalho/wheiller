@@ -2,10 +2,10 @@
 
 require 'vendor/phpmailer/phpmailer/PHPMailerAutoload.php';
 
-$texto1 = $_POST['texto1'];
+$texto = $_POST['texto'];
 $texto2 = $_POST['texto2'];
 $texto3 = $_POST['texto3'];
-$caminho1 = $_FILES["caminho1"];
+$caminho = $_FILES["caminho"];
 $caminho2 = $_FILES["caminho2"];
 $caminho3 = $_FILES['caminho3'];
 
@@ -30,7 +30,7 @@ $mail->isHTML(true);                                  // Set email format to HTM
 $mail->Subject = 'PRODUÇÃO DE VT';
 
 // $mail->Body   .=  '<p>slogan da Empresa :</p>'.$sloganEmpresa.$quebralina;
-$mail->Body   =  '<p>Texo1 :</p>'.$texto1;
+$mail->Body   =  '<p>Texo1 :</p>'.$texto;
 // $mail->Body   .=  '<p>Texo2 :</p>'.$texto2;
 // $mail->Body   .=  '<p>Texo3 :</p>'.$texto3;
 // $mail->Body   .=  '<p>Caminho1 :</p>'.$caminho1;
@@ -40,9 +40,9 @@ $mail->Body   =  '<p>Texo1 :</p>'.$texto1;
 // $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
 
-if($caminho1["size"] > 0)
+if($caminho["size"] > 0)
 	{
-		$mail->addAttachment($caminho1["tmp_name"], $caminho1["name"]);
+		$mail->addAttachment($caminho["tmp_name"], $caminho["name"]);
 	}
 // $mail->addAttachment($caminho2["tmp_name"], $caminho2["name"]);
 // $mail->addAttachment($caminho3["tmp_name"], $caminho3["name"]);
