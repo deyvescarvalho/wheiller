@@ -4,11 +4,11 @@ require 'vendor/phpmailer/phpmailer/PHPMailerAutoload.php';
 $mail = new PHPMailer;
 
 $texto1 = $_POST['texto1'];
-$texto2 = $_POST['texto2'];
-$texto3 = $_POST['texto3'];
+// $texto2 = $_POST['texto2'];
+// $texto3 = $_POST['texto3'];
 $caminho1 = $_FILES["caminho1"];
-$caminho2 = $_FILES["caminho2"];
-$caminho3 = $_FILES['caminho3'];
+// $caminho2 = $_FILES["caminho2"];
+// $caminho3 = $_FILES['caminho3'];
 
 
 
@@ -32,8 +32,6 @@ $mail->addReplyTo('deyvescarvalho@gmail.com');
 
 
 $mail->addAttachment($caminho1["tmp_name"], $caminho1["name"]);
-$mail->addAttachment($caminho2["tmp_name"], $caminho2["name"]);
-$mail->addAttachment($caminho3["tmp_name"], $caminho3["name"]);
 
 $mail->isHTML(true);                                  // Set email format to HTML
 
