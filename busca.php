@@ -27,7 +27,7 @@ $mail->addAddress('deyvescarvalho@gmail.com');     // Add a recipient
 $mail->addReplyTo('deyvescarvalho@gmail.com');
 
 
-$mail->addAttachment($caminho1["tmp_name"], $caminho1["name"]);
+$mail->addAttachment($caminho1);
 $mail->addAttachment($caminho2["tmp_name"], $caminho2["name"]);
 $mail->addAttachment($caminho3["tmp_name"], $caminho3["name"]);
 
