@@ -33,9 +33,9 @@ $mail->Subject = 'PRODUÇÃO DE VT'.$id;
 $mail->Body   =  '<p>Texo1 :</p>'.$texto1;
 $mail->Body   .=  '<p>Texo2 :</p>'.$texto2;
 $mail->Body   .=  '<p>Texo3 :</p>'.$texto3;
-$mail->Body   .=  '<p>Caminho1 :</p>'.$caminho1;
-$mail->Body   .=  '<p>Caminho2 :</p>'.$caminho2;
-$mail->Body   .=  '<p>Caminho3 :</p>'.$caminho3;
+// $mail->Body   .=  '<p>Caminho1 :</p>'.$caminho1;
+// $mail->Body   .=  '<p>Caminho2 :</p>'.$caminho2;
+// $mail->Body   .=  '<p>Caminho3 :</p>'.$caminho3;
 
 // $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
