@@ -1,7 +1,6 @@
 <?php
 
 require 'vendor/phpmailer/phpmailer/PHPMailerAutoload.php';
-$mail = new PHPMailer;
 
 $texto1 = $_POST['texto1'];
 $texto2 = $_POST['texto2'];
@@ -12,6 +11,7 @@ $caminho3 = $_FILES['caminho3'];
 
 
 
+$mail = new PHPMailer;
 
 $mail->isSMTP();                                      // Set mailer to use SMTP
 $mail->Host = 'email-smtp.us-west-2.amazonaws.com';  // Specify main and backup SMTP servers
@@ -27,12 +27,12 @@ $mail->addAddress('deyvescarvalho@gmail.com');     // Add a recipient
 $mail->addReplyTo('deyvescarvalho@gmail.com');
 $mail->isHTML(true);                                  // Set email format to HTML
 
-$mail->Subject = 'PRODUÇÃO DE VT'.$id;
+$mail->Subject = 'PRODUÇÃO DE VT';
 
 // $mail->Body   .=  '<p>slogan da Empresa :</p>'.$sloganEmpresa.$quebralina;
 $mail->Body   =  '<p>Texo1 :</p>'.$texto1;
-$mail->Body   .=  '<p>Texo2 :</p>'.$texto2;
-$mail->Body   .=  '<p>Texo3 :</p>'.$texto3;
+// $mail->Body   .=  '<p>Texo2 :</p>'.$texto2;
+// $mail->Body   .=  '<p>Texo3 :</p>'.$texto3;
 // $mail->Body   .=  '<p>Caminho1 :</p>'.$caminho1;
 // $mail->Body   .=  '<p>Caminho2 :</p>'.$caminho2;
 // $mail->Body   .=  '<p>Caminho3 :</p>'.$caminho3;
