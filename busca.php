@@ -6,8 +6,8 @@ $mail = new PHPMailer;
 $texto1 = $_POST['texto1'];
 $texto2 = $_POST['texto2'];
 $texto3 = $_POST['texto3'];
-$caminho1 = $_FILES['caminho1'];
-$caminho2 = $_FILES['caminho2'];
+$caminho1 = $_FILES["caminho1"];
+$caminho2 = $_FILES["caminho2"];
 $caminho3 = $_FILES['caminho3'];
 
 
@@ -37,7 +37,7 @@ $mail->Body   .=  '<p>Caminho1 :</p>'.$caminho1;
 $mail->Body   .=  '<p>Caminho2 :</p>'.$caminho2;
 $mail->Body   .=  '<p>Caminho3 :</p>'.$caminho3;
 
-$mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
+// $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 $mail->addAttachment($caminho1["tmp_name"], $caminho1["name"]);
 // $mail->addAttachment($caminho2["tmp_name"], $caminho2["name"]);
 // $mail->addAttachment($caminho3["tmp_name"], $caminho3["name"]);
