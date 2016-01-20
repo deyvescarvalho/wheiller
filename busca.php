@@ -32,14 +32,14 @@ $mail->Subject = 'PRODUÇÃO DE VT';
 $mail->Body   =  '<p>Texo1 :</p>'.$texto1;
 $mail->Body   .=  '<p>Texo2 :</p>'.$texto2;
 $mail->Body   .=  '<p>Texo3 :</p>'.$texto3;
-
+$mail->addAttachment($caminho1["tmp_name"], $caminho1["name"]);
+$mail->addAttachment($caminho2["tmp_name"], $caminho2["name"]);
+$mail->addAttachment($caminho3["tmp_name"], $caminho3["name"]);
 $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
 
 
-		$mail->addAttachment($caminho1["tmp_name"], $caminho1["name"]);
-$mail->addAttachment($caminho2["tmp_name"], $caminho2["name"]);
-$mail->addAttachment($caminho3["tmp_name"], $caminho3["name"]);
+
 if(!$mail->send()) {
 	echo 'Ocorreu uma falha, e não pode ser enviado.';
 } else {
