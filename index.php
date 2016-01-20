@@ -8,7 +8,7 @@
           <div class="form-group">
             <label for="opcINput">TEXTO <?php echo $i +1;  ?></label>
             <input type="text" name="texto<?php echo $i +1;  ?>" id="opcINput" class="txtAbertura form-control" placeholder="Inserir texto de abertura">
-            <input type="file" name="caminho<?php echo $i+1;  ?>" class="form-control" id="arquivo" accept="image/*">
+            <input type="file" name="caminho<?php echo $i +1;  ?>" class="form-control" id="arquivo" accept="image/*">
 
           </div>
 

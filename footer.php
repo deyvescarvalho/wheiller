@@ -1,3 +1,3 @@
-<script src="css/js/bootstrap.js"></script>
+<!-- <script src="css/js/bootstrap.js"></script> -->
 </body>
 </html>
