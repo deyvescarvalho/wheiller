@@ -50,5 +50,6 @@ if(!$mail->send()) {
 	echo 'Mailer Error: ' . $mail->ErrorInfo;
 } else {
 	echo 'Pedido enviado com sucesso!';
+	header("Location: index.php");
 }
 ?>
